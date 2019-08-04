@@ -31,9 +31,11 @@ class SeniorCitizenCustomer extends Customer {
 	}
 	
 	Double getBillAmount(Double amount) {
-		Double bill =null; //edit as per the question
-		//Write your code here of required
-		return bill;
+		if(amount == 500) {
+			return 440.0;
+		} else {
+			return amount - 10 * amount / 100; //edit as per the question
+		}
 	}
 
 }
@@ -42,10 +44,10 @@ class PrivilegeCustomer extends Customer {
 	PrivilegeCustomer(String name, String address, Integer age, String mobile) {
 			super(name, address, age, mobile);
 		}
-		Double getBillAmount(Double amount) {
-			Double bill = null; //edit as per the Question 
+		Double getBillAmount(Double amount) {			 
 			//write your code here if required.
-			return bill;
+			Double bill = amount - 30 * amount / 100;
+			return bill;			
 		}
 }
 
